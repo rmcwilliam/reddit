@@ -8,6 +8,24 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
+  get "signup", to: "registration#new"
+  post "signup", to: "registration#create"
+
+  get "login", to: "sessions#new"
+  post "login", to: "sessions#create"
+  delete "login", to: "sessions#destroy"
+
+  get "links", to: "links#index"
+  get "links/new", to: "links#new"
+  post "links", to: "links#create"
+  get "links/:id", to: "links#show"
+  delete "links/:id", to: "links#destroy"
+
+  post "links/:id/comments", to: "comments#create", as: "comments"
+  get "links/:id/comments", to: "comments#index"  # a tags always GET; form tag always POST or method: :put
+
+
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
