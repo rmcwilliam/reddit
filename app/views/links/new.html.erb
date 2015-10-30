@@ -1,0 +1,19 @@
+<h1> Post a link to some cool stuff </h1>
+
+	<%= form_tag (link_path) do %>
+
+		<div class="link_input">
+			<%=label_tag "URL: "%>
+			<%=text_field_tag :url %>
+		</div>
+
+
+		<div class="link_input">
+			<%=label_tag "What should the link say? "%>
+			<%=url_field_tag :title %>
+		</div>
+
+		<%= submit_tag "POSTIT!" %>
+	<% end %>
+
+	
