@@ -20,5 +20,11 @@ class LinksController < ApplicationController
     render :index
   end
 
+  def destroy 
+    link = Link.find(params[:id])
+    post.destroy
+    redirect_to posts_path
+  end
+
 
 end
