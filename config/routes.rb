@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   get "links", to: "links#index"
   get "links/new", to: "links#new"
   post "links", to: "links#create"
-  get "links/:id", to: "links#show"
   delete "links/:id", to: "links#destroy"
 
   post "links/:id/comments", to: "comments#create", as: "comments"
