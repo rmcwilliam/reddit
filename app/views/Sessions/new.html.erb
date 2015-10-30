@@ -1,0 +1,21 @@
+<h1> Login with your Username </h1>
+
+<h4> Please enter your username and password in order to participate. </h4>
+
+	<%= form_tag (login_path) do %>
+
+		<div class="login_input">
+			<%=label_tag "username: "%>
+			<%=text_field_tag :name %>
+		</div>
+
+
+		<div class="login_input">
+			<%=label_tag "Password: "%>
+			<%=password_field_tag :password %>
+		</div>
+
+		<%= submit_tag "Login!" %>
+	<% end %>
+
+	
