@@ -6,12 +6,12 @@ class LinksController < ApplicationController
   end
 
   def create 
-    @link = Link.new(:title params[:title], :url params[:url])
+    @link = Link.create(title: params[:title], url: params[:url])
     redirect_to links_path
   end
 
   def index
-    @links = Link.title(params[:title])
+    @links = Link.all
     render :index
   end
 
