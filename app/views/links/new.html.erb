@@ -3,14 +3,14 @@
 	<%= form_tag (links_path) do %>
 
 		<div class="link_input">
-			<%=label_tag "URL: "%>
-			<%=text_field_tag :url %>
+			<%=label_tag "Give your link a title!"%>
+			<%=text_field_tag :title %>
 		</div>
 
 
 		<div class="link_input">
-			<%=label_tag "What should the link say? "%>
-			<%=url_field_tag :title %>
+			<%=label_tag "What is the URL?"%>
+			<%=url_field_tag :url %>
 		</div>
 
 		<%= submit_tag "POSTIT!" %>
