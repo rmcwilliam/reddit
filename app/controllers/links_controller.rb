@@ -10,11 +10,6 @@ class LinksController < ApplicationController
     redirect_to links_path
   end
 
-  def show
-    @link = Link.find(params[:id])
-    render :show
-  end
-
   def index
     @links = Link.title(params[:title])
     render :index
