@@ -5,7 +5,7 @@
 	<%= @links.each do |link| %>
 		<li>	
 			<%= link_to link.title, link_path(link) %>
-			<%= link_to "Discuss this link!!!", comment_path(link), method: :get %>  ###HELP
+			<%= link_to "Discuss this link!!!", comment_path(link) %>
 		</li>
 	<%= end %>
 </ol>
