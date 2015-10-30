@@ -2,10 +2,10 @@
 <h2> Explore the interwebs </h2>
 
 <ol class="link_list">
-	<%= @links.each do |link| %>
+	<% @links.each do |link| %>
 		<li>	
-			<%= link_to link.title, link_path(link) %>
-			<%= link_to "Discuss this link!!!", comment_path(link) %>
+			<%= link_to link.title, link.url %>
+			<%= link_to "Discuss this link!!!", comments_path(link) %>
 		</li>
-	<%= end %>
+	<% end %>
 </ol>
