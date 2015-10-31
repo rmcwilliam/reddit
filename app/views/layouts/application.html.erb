@@ -8,6 +8,20 @@
 </head>
 <body>
 
+  <nav>
+  	<% if flash[:notice] %>
+  		<h3><div class="notice"><%= flash[:notice] %></div></h3>
+  	<% end %>
+  	
+	 <% if current_user %>
+        <h3>Welcome to Reddit(kinda), <%= current_user.name %>!</h3>
+        <%= link_to "Logout", login_path, method: "delete" %>
+    <% else %>
+        <%= link_to "Login", login_path %>
+        <%= link_to "Sign Up", signup_path %>
+    <% end %>
+  </nav>
+
 <%= yield %>
 
 </body>
