@@ -7,5 +7,7 @@ class CommentsController < ApplicationController
   end
 
   def index
+    @link = Link.find(params[:id])
+    render :comments
   end
 end
