@@ -1,4 +1,5 @@
-<h1>New User</h1>
+<h1>Reddit(kinda)</h1>
+<h4>New User Registration</h4>
 
 <%= form_tag(signup_path) do %>
 	<% if @user.errors.any? %>
@@ -14,18 +15,18 @@
 	<% end %>
 
 	<div class="user-field">
-        <%= label_tag "Username: " %>
-        <%= text_field_tag :name %>
+        <p><%= label_tag "Username: " %>
+        <%= text_field_tag :name %></p>
     </div>
 
     <div class="user-field">
-        <%= label_tag "Email: " %>
-        <%= text_field_tag :email %>
+        <p><%= label_tag "Email: " %>
+        <%= text_field_tag :email %></p>
     </div>
 
     <div class="user-field">
-        <%= label_tag "Password " %>
-        <%= password_field_tag :password %>
+        <p><%= label_tag "Password " %>
+        <%= password_field_tag :password %></p>
     </div>
 
     <%= submit_tag "Sign Up" %>
