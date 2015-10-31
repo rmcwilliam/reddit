@@ -12,3 +12,16 @@
 		<%= submit_tag "Come on internet tough guy, do it!" %>
 	<% end %>
 </div>
+
+<%= link_to "Links Index", links_path %>
+
+<h2>Comments</h2>
+<div class="comments">
+  <% @link.comments.each do |comment| %>
+	<div class="comment">
+		<em>Written: <%= time_ago_in_words(comment.created_at) %> ago</em>
+		<%= simple_format(comment.content) %>
+	</div>
+  <% end %>
+</div>
+
