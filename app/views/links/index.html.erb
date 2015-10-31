@@ -1,13 +1,15 @@
 <h1> Reddit(kinda) </h1>
-<h2> Explore the interwebs </h2>
+
+<h3>User posted links and comments:</h3>
 
 <ol class="link_list">
 	<% @links.each do |link| %>
 		<li>	
-			<%= link_to link.title, link.url %>
-			<%= link_to "Discuss this link!!!", comments_path(link) %>
+			<%= link_to link.title, "#{link.url}" %>	
+			<p><%= link_to "Comment on the link", comments_path(link) %></p>
 		</li>
 	<% end %>
 </ol>
+
 
 <%= link_to "Submit New", links_new_path %>
