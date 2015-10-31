@@ -10,6 +10,7 @@ def create
 			session[:user_id] = user.id
 			redirect_to links_path
 		else
+			flash[:notice] = "You must enter a valid username and password. Do you have an account?"
 			redirect_to login_path
 		end
 end
