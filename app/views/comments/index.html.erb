@@ -1,0 +1,27 @@
+<h2><%= @link.title %></h2>
+
+
+<div class="peanut-gallery">
+	<h3>Add a Comment</h3>
+	<%= form_tag(comments_path(@link)) do %>
+		<div class="comment-section">
+		  <%= label_tag "Comment: " %>
+		  <%= text_area_tag :comment, nil, cols: 48, rows: 7 %>
+		</div>
+
+		<%= submit_tag "Come on internet tough guy, do it!" %>
+	<% end %>
+</div>
+
+<%= link_to "Links Index", links_path %>
+
+<h2>Comments</h2>
+<div class="comments">
+  <% @link.comments.each do |comment| %>
+	<div class="comment">
+		<em>Written: <%= time_ago_in_words(comment.created_at) %> ago</em>
+		<%= simple_format(comment.content) %>
+	</div>
+  <% end %>
+</div>
+
