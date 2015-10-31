@@ -8,19 +8,22 @@
 		  <%= label_tag "Comment: " %>
 		  <%= text_area_tag :comment, nil, cols: 48, rows: 7 %>
 		</div>
-
+		<div class="comments-submit">
 		<%= submit_tag "Come on internet tough guy, do it!" %>
+		</div>
 	<% end %>
 </div>
 
+<div class="links-index">
 <%= link_to "Links Index", links_path %>
+</div>
 
 <h2>Comments</h2>
 <div class="comments">
   <% @link.comments.each do |comment| %>
 	<div class="comment">
 		<em>Written: <%= time_ago_in_words(comment.created_at) %> ago</em>
-		<%= simple_format(comment.content) %>
+		<p><%= simple_format(comment.content) %></p>
 	</div>
   <% end %>
 </div>

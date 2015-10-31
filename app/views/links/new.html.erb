@@ -4,16 +4,18 @@
 
 		<div class="link_input">
 			<%=label_tag "Give your link a title!"%>
-			<%=text_field_tag :title %>
+			<p><%=text_field_tag :title %></p>
 		</div>
 
 
 		<div class="link_input">
 			<%=label_tag "What is the URL?"%>
-			<%=url_field_tag :url %>
-		</div>
+			<p><%=url_field_tag :url %></p>
 
-		<%= submit_tag "POSTIT!" %>
+		</div>
+		<div class="post-it">
+		  <%= submit_tag "Post It!" %>
+		</div>
 	<% end %>
 
 	
