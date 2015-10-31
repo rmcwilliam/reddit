@@ -8,6 +8,6 @@ class CommentsController < ApplicationController
 
   def index
     @link = Link.find(params[:id])
-    render :comments
+    render :index
   end
 end
