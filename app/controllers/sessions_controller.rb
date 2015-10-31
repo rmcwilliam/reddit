@@ -5,12 +5,12 @@ def new
 end
 
 def create
-	user = User.find_by!(name: params[:name])
+	user = User.find_by!(name: params[:username])
 		if user.password == params[:password]
 			session[:user_id] = user.id
-			redirect links_path
+			redirect_to links_path
 		else
-			redirect login_path
+			redirect_to login_path
 		end
 end
 
