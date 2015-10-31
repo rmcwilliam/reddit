@@ -4,7 +4,7 @@
 <%= form_tag(signup_path) do %>
 	<% if @user.errors.any? %>
 	  <div class="form-errors">
-		<h2><%= pluralize(@user.errors.count, "error") %> the following errors have prevented your user from being saved:</h2>
+		<h3><%= pluralize(@user.errors.count, "error") %> have prevented your user from being saved:</h3>
 
 		<ul>
 			<% @user.errors.full_messages.each do |msg| %>
