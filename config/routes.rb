@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   post "links/:id/comments", to: "comments#create", as: "comments"
   get "links/:id/comments", to: "comments#index"  # a tags always GET; form tag always POST or method: :put
-  delete "links/:id/comments", to: "comments#destroy"
+  delete "links/:id/comments", to: "comments#destroy", as: "destroy"
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
