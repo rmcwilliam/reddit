@@ -5,8 +5,9 @@
 <ol class="link_list">
 	<% @links.each do |link| %>
 		<li>	
-			   <%= link_to link.title, "#{link.url}" %>	
-			<p><%= link_to "Comment on the link", comments_path(link) %></p>
+			 <%= link_to link.title, "#{link.url}" %>
+			 <%= link_to "Delete link", delete_path(link), method: "delete" %>
+		  <p><%= link_to "Comment on the link", comments_path(link) %></p>
 		</li>
 	<% end %>
 </ol>
