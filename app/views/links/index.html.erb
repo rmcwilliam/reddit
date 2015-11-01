@@ -5,13 +5,15 @@
 <ol class="link_list">
 	<% @links.each do |link| %>
 		<li>	
-			 <%= link_to link.title, "#{link.url}" %>
-			 <%= link_to "Delete link", delete_path(link), method: "delete" %>
-		  <p><%= link_to "Comment on the link", comments_path(link) %></p>
+			<%= link_to link.title, "#{link.url}" %>
+			 <div class="delete-comment">
+			 		 <span><%= link_to "Comment", comments_path(link) %>
+			         <%= link_to "Delete", delete_path(link), method: "delete" %></span>
+		     </div>
 		</li>
 	<% end %>
 </ol>
 
 <div class="submit-new">
-<%= link_to "Submit New", links_new_path %>
+<%= link_to "Post a New Link!", links_new_path %>
 </div>
