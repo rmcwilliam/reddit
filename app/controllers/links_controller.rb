@@ -18,7 +18,7 @@ class LinksController < ApplicationController
 
   def destroy 
     link = Link.find(params[:id])
-    post.destroy
+    link.destroy
     redirect_to links_path
   end
 
