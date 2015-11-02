@@ -19,7 +19,6 @@ body {
 }
 
 .nav-title {
-	color:;
 	font-family: Andale Mono, monospace;
 }
 
@@ -40,12 +39,10 @@ a {
 }
 
 .link_list {
-	list-style-type:;
 	font-family: Lucida Console, Monaco, monospace;
 }
 
 .link_list li a {
-	border:;
 	color:#0A0A0F;
 	font-size: 30px;
 	font-family: Lucida Console, Monaco, monospace;
@@ -53,26 +50,20 @@ a {
 
 .link_list p a{
 	color:#0066FF;
-	font-size:;
-	border:;
 }
  
 .link_list span a{
 	color:#FF4D4D;
-	border:;
 	font-size:12px;
 	padding:2px;
-	font-family:;
 }
 
 .delete-comment{
-	border:;
 	height:22px;
 }
  .submit-new a {
  	color:black;
  	font-family: Impact, Charcoal, sans-serif;
- 	border:;
  	margin-left: 7px;
  }
 
