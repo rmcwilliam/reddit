@@ -6,7 +6,7 @@ end
 
 def create
 	user = User.find_by!(name: params[:username])
-		if user.password == params[:password]
+		if user.authenticate(params[:password])
 			session[:user_id] = user.id
 			redirect_to links_path
 		else
