@@ -2,11 +2,17 @@
 
 
 one:
-  name: Ryan
+  name: ryan
   email: rmcwilliam@gmail.com
   password_digest: passwordpassword 
 
 two:
-  name: Ryan
+  name: ryan
   email: rmcwilliam@gmail.com
   password_digest: passwordpassword 
+
+three:
+  name: ryan
+  email: rmcwilliam@gmail.com
+  password_digest: passwordpassword 
+
