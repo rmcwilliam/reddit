@@ -2,26 +2,40 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
 
-  test "should not save user without name" do
-    user = User.new
-    assert_not user.save
+  test "name must be present to save" do
+    user = User.first
+    user.email = nil
+
+    refute user.save
+    assert user.errors[:name].present?
   end
 
-  test "should not save user with same name" do
-    user = User.new
-    assert_not user.save
+  test "users must have a password" do
+    user = users(:one)
+    user.password = nil
+
+    refute user.save
+    assert user.errors[:password].present?
   end
 
-  # {controller: "registrations", action: "new"}.must_route_to "/signup"
+  test "users name must be unique" do
+    user1 = users(:one)
+    user2 = users(:two)
 
-  # assert_generates "/signup", controller: "registrations", action: "new"
+    user2.name = user1.name 
+    assert_equal user1.name, user2.name
 
-  # assert_generates "/signup", controller: "registrations", action: "create"
+    refute user2.save
+    assert user2.errors[:name].find { |msg| msg.include?("taken")}
+  end
 
-  # #  get "/signup", to: "registrations#new"
-  # post "/signup", to: "registrations#create"
+  test "a user has many comments" do
+    user = users(:three)
+    assert user.comments.count == 2
+  end
 
-  # describe User do
-  #   it { should have_many :comments, :links }
-  # end
+  test "a user has many links" do
+    user = users(:three)
+    assert user.links.count == 2  
+  end
 end
