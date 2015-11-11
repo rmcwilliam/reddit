@@ -1,13 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  content: important stuff
+  content: Mystring
   user: three
-  link_id: 1
-  user_id: 1
+  link: one
 
 two:
   content: MyString
   user: three
-  link_id: 1
-  user_id: 1
+  link: one
