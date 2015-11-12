@@ -20,11 +20,11 @@ class LinksControllerTest < ActionController::TestCase
   login_one!
    assert_difference("Link.count") do
     post :create,  {title: "turtles are cool", url: "turtle site"}
- end
+  end
   assert_redirected_to links_path
- end
+  end
 
- test "non-logged in user can see index of links" do
+  test "non-logged in user can see index of links" do
    get :index
   end
 
@@ -33,7 +33,7 @@ class LinksControllerTest < ActionController::TestCase
   links(:one)
    assert_difference("Link.count", -1, "A link should be destroyed") do
     delete :destroy, id: links(:one)
- end
+  end
   assert_redirected_to links_path
- end
+  end
 end
