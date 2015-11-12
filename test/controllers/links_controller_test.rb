@@ -12,7 +12,7 @@ class LinksControllerTest < ActionController::TestCase
     assert_not_nil assigns(:link)
   end
 
-  test "non-logged in users cannot post links" do
+  test "non-logged in users cannot create new link object" do
     get :new
   end
 
