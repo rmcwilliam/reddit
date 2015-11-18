@@ -79,12 +79,12 @@ Rails.application.configure do
 
   # Add production smtp settings 
   config.action_mailer.delivery_method = :smtp 
-  config.action_mailer.delivery_settings = {
-    address: ENV.fetch("SMTP_ADDRESS"),
-    domain: ENV.fetch("SMTP_DOMAIN"),
+  config.action_mailer.smtp_settings = {
+    address: ENV["SMTP_ADDRESS"],
+    domain: ENV["SMTP_DOMAIN"],
     port: 587,
-    username: ENV.fetch("SMTP_USERNAME"),
-    password: ENV.fetch("SMTP_PASSWORD"),
+    username: ENV["SMTP_USERNAME"],
+    password: ENV["SMTP_PASSWORD"],
     authentication: 'plain',
     enable_starttls_auto: true,
   }
