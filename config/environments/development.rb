@@ -42,11 +42,13 @@ Rails.application.configure do
   # Add development smtp settings 
   config.action_mailer.delivery_method = :smtp 
   config.action_mailer.delivery_settings = {
-    address: 'smtp.mandrillapp.com'
-    port: 587
-    username: 'ryanmcwilliam@gmail.com'
-    authentication: 'plain'
-    enable_starttls_auto: true
+    address: ENV.fetch("SMTP_ADDRESS"),
+    domain: ENV.fetch("SMTP_DOMAIN"),
+    port: 587,
+    username: ENV.fetch("SMTP_USERNAME"),
+    password: ENV.fetch("SMTP_PASSWORD"),
+    authentication: 'plain',
+    enable_starttls_auto: true,
   }
 
 end
