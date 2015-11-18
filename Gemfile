@@ -33,6 +33,9 @@ gem 'foreman'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+# Add Puma 
+gem 'puma'
+
 #send mail with mandrill 
 gem 'mandrill-api'
 
