@@ -12,6 +12,8 @@ class RegistrationsController < ApplicationController
                      password: params[:password])
 
     if @user.save
+      UserMailer.welcome_email(@user)deliver_now
+      render "create.json.jbuilder", status: :created 
       redirect_to links_path
     else
       render :new
