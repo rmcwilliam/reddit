@@ -27,17 +27,20 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-# Add foreman
+# Add foreman to handle local env variables 
 gem 'foreman'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
 
-# Add Puma 
+# Add devise for authentication 
+gem 'devise'
+
+# Add Puma to work with foreman
 gem 'puma'
 
-#send mail with mandrill 
-gem 'mandrill-api'
+# Access mandrill api
+# gem 'mandrill-api'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
