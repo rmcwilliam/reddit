@@ -43,7 +43,6 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Add development smtp settings 
-  config.action_mailer.delivery_method = :sendmail
   config.action_mailer.delivery_method = :smtp 
   config.action_mailer.smtp_settings = {
     address: ENV["SMTP_ADDRESS"],
