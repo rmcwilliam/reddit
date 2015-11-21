@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120022319) do
+ActiveRecord::Schema.define(version: 20151121192100) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "content"
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20151120022319) do
     t.string   "email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "password_digest"
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
