@@ -1,7 +1,7 @@
-class UserMailer < ApplicationMailer
+# class UserMailer < ApplicationMailer
 
-   def welcome_email(user)
-    @user = user 
-    mail(to: user.email, subject: "Welcome to Reddit, kinda!")
-  end
-end
+#    def welcome_email(user)
+#     @user = user 
+#     mail(to: user.email, subject: "Welcome to Reddit, kinda!")
+#   end
+# end
