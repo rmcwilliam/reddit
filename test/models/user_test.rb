@@ -7,7 +7,7 @@ class UserTest < ActiveSupport::TestCase
     user.email = nil
 
     refute user.save
-    assert user.errors[:name].present?
+    assert user.errors[:username].present?
   end
 
   test "users must have a password" do
@@ -26,7 +26,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal user1.name, user2.name
 
     refute user2.save
-    assert user2.errors[:name].find { |msg| msg.include?("taken")}
+    assert user2.errors[:username].find { |msg| msg.include?("taken")}
   end
 
   test "a user has many comments" do
