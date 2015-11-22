@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   devise_for :users
   
-  root to: "links#index"
+  root to: "links#index", as: "user_root_path"
 
   # get "signup", to: "registrations#new"
   # post "signup", to: "registrations#create"
