@@ -14,6 +14,7 @@ class LinksControllerTest < ActionController::TestCase
 
   # test "logged in users can create new link object" do
   #  get :new
+  #  binding.pry
   #   assert_not_nil assigns(:link)
   # end
 
@@ -33,7 +34,6 @@ class LinksControllerTest < ActionController::TestCase
   end
 
   # test "logged in user can delete link" do
-  # sign_in users(:one)
   # links(:one)
   #  assert_difference("Link.count", -1, "A link should be destroyed") do
   #   delete :destroy, id: links(:one)
