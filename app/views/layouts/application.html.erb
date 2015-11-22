@@ -10,7 +10,7 @@
 
   <nav>
 	 <% if current_user %>
-        <h3 class="nav-title">Welcome to Reddit(kinda), <%= current_user.name %>!</h3>
+        <h3 class="nav-title">Welcome to Reddit(kinda), <%= current_user.username %>!</h3>
         <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
     <% else %>
         <%= link_to "Login", new_user_session_path %>
