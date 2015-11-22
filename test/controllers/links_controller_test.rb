@@ -7,13 +7,12 @@ class LinksControllerTest < ActionController::TestCase
   #   session[:user_id] = users(:one).id
   # end
 
-  # def setup
-  #   @request.env["devise.mapping"] = Devise.mappings[:user]
-  #   get :new
-  # end
+  def setup
+    @request.env["devise.mapping"] = Devise.mappings[:user]
+    sign_in users(:one)
+  end
 
   # test "logged in users can create new link object" do
-  # sign_in users(:one)
   #  get :new
   #   assert_not_nil assigns(:link)
   # end
@@ -23,7 +22,6 @@ class LinksControllerTest < ActionController::TestCase
   end
 
   # test "logged in user can create new link" do
-  # sign_in users(:one)
   #  assert_difference("Link.count") do
   #   post :create,  {title: "turtles are cool", url: "turtle site"}
   # end
