@@ -2,17 +2,17 @@
 
 
 one:
-  name: ryan
-  email: rmcwilliam@gmail.com
-  password_digest: passwordpassword 
+  username: ryan1
+  email: rmcwilliam1@gmail.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, "password") %>
 
 two:
-  name: ryan
-  email: rmcwilliam@gmail.com
-  password_digest: passwordpassword 
+  username: ryan2
+  email: rmcwilliam2@gmail.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, "password") %>
 
 three:
-  name: ryan
-  email: rmcwilliam@gmail.com
-  password_digest: passwordpassword 
+  username: ryan3
+  email: rmcwilliam3@gmail.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, "password") %>
 
