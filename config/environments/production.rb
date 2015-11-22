@@ -78,13 +78,13 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Add production smtp settings 
-  config.action_mailer.default_url_options = { host: "https://murmuring-retreat-4837.herokuapp.com", protocol: "https"}
+  config.action_mailer.default_url_options = { host: "reddit.herokuapp.com", protocol: "https"}
   config.action_mailer.delivery_method = :smtp 
   config.action_mailer.smtp_settings = {
-    address: ENV["SMTP_ADDRESS"],
+    address: "smtp.mandrillapp.com",
     port: 587,
-    user_name: ENV["SMTP_USERNAME"],
-    password: ENV["SMTP_PASSWORD"],
+    user_name: ENV["MANDRILL_USERNAME"],
+    password: ENV["MANDRILL_API_KEY"],
     authentication: 'plain',
     enable_starttls_auto: true
   }
